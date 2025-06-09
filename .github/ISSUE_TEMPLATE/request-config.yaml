@@ -22,40 +22,135 @@ body:
     validations:
       required: true
 
+  # Roster Settings
   - type: input
-    id: roster_settings
+    id: qb
     attributes:
-      label: Roster Settings
-      description: Enter roster spots (e.g., QB:1, RB:2, WR:2, TE:1, FLEX:1, K:1, DEF:1, BN:6)
-      placeholder: "QB:1, RB:2, WR:2, TE:1, FLEX:1, K:1, DEF:1, BN:6"
+      label: Quarterbacks (QB)
+      description: How many QB spots per team?
+      placeholder: "1"
+    validations:
+      required: true
+  - type: input
+    id: rb
+    attributes:
+      label: Running Backs (RB)
+      description: How many RB spots per team?
+      placeholder: "2"
+    validations:
+      required: true
+  - type: input
+    id: wr
+    attributes:
+      label: Wide Receivers (WR)
+      description: How many WR spots per team?
+      placeholder: "2"
+    validations:
+      required: true
+  - type: input
+    id: te
+    attributes:
+      label: Tight Ends (TE)
+      description: How many TE spots per team?
+      placeholder: "1"
+    validations:
+      required: true
+  - type: input
+    id: flex
+    attributes:
+      label: FLEX
+      description: How many FLEX spots per team?
+      placeholder: "1"
+    validations:
+      required: false
+  - type: input
+    id: k
+    attributes:
+      label: Kickers (K)
+      description: How many Kicker spots per team?
+      placeholder: "1"
+    validations:
+      required: false
+  - type: input
+    id: def
+    attributes:
+      label: Defense/Special Teams (DEF)
+      description: How many DEF spots per team?
+      placeholder: "1"
+    validations:
+      required: false
+  - type: input
+    id: bench
+    attributes:
+      label: Bench (BN)
+      description: How many bench spots per team?
+      placeholder: "6"
     validations:
       required: true
 
-  - type: textarea
-    id: scoring_settings
+  # Scoring Settings
+  - type: input
+    id: pass_yds
     attributes:
-      label: Scoring Settings
-      description: |
-        Provide your scoring rules. Example:
-        ```
-        Pass Yards: 0.04 per yard
-        Pass TD: 4
-        INT: -2
-        Rush Yards: 0.1 per yard
-        Rush TD: 6
-        Rec Yards: 0.1 per yard
-        Rec TD: 6
-        Receptions: 1
-        ```
-      placeholder: |
-        Pass Yards: 0.04 per yard
-        Pass TD: 4
-        INT: -2
-        Rush Yards: 0.1 per yard
-        Rush TD: 6
-        Rec Yards: 0.1 per yard
-        Rec TD: 6
-        Receptions: 1
+      label: Passing Yards (per yard)
+      description: Points per passing yard (e.g., 0.04)
+      placeholder: "0.04"
+    validations:
+      required: true
+  - type: input
+    id: pass_td
+    attributes:
+      label: Passing Touchdowns (TD)
+      description: Points per passing TD
+      placeholder: "4"
+    validations:
+      required: true
+  - type: input
+    id: int
+    attributes:
+      label: Interceptions (INT)
+      description: Points per interception (negative value)
+      placeholder: "-2"
+    validations:
+      required: true
+  - type: input
+    id: rush_yds
+    attributes:
+      label: Rushing Yards (per yard)
+      description: Points per rushing yard (e.g., 0.1)
+      placeholder: "0.1"
+    validations:
+      required: true
+  - type: input
+    id: rush_td
+    attributes:
+      label: Rushing Touchdowns (TD)
+      description: Points per rushing TD
+      placeholder: "6"
+    validations:
+      required: true
+  - type: input
+    id: rec_yds
+    attributes:
+      label: Receiving Yards (per yard)
+      description: Points per receiving yard (e.g., 0.1)
+      placeholder: "0.1"
+    validations:
+      required: true
+  - type: input
+    id: rec_td
+    attributes:
+      label: Receiving Touchdowns (TD)
+      description: Points per receiving TD
+      placeholder: "6"
+    validations:
+      required: true
+  - type: input
+    id: rec
+    attributes:
+      label: Receptions
+      description: Points per reception (PPR, e.g., 1)
+      placeholder: "1"
     validations:
       required: true
 
