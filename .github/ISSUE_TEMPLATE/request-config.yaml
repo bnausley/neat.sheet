@@ -1,6 +1,11 @@
 name: League & Scoring Settings Request
 description: Submit your league and scoring settings to generate a custom configuration.
 body:
+  - type: markdownAdd commentMore actions
+    attributes:
+    value: |
+      ### Roster Settings (number per team)
+        
   - type: input
     id: number_of_teams
     attributes:
