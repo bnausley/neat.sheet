@@ -2,15 +2,6 @@ name: League & Scoring Settings Request
 description: Submit your league and scoring settings to generate a custom configuration.
 body:
   - type: input
-    id: league_name
-    attributes:
-      label: League Name
-      description: What is the name of your fantasy league?
-      placeholder: "My Fantasy League"
-    validations:
-      required: true
-
-  - type: input
     id: number_of_teams
     attributes:
       label: Number of Teams
@@ -48,9 +39,27 @@ body:
       placeholder: "1"
     validations: { required: true }
   - type: input
-    id: flex
+    id: wr_rb_flex
     attributes:
-      label: FLEX
+      label: WR/RB
+      placeholder: "1"
+    validations: { required: false }
+  - type: input
+    id: wr_te_flex
+    attributes:
+      label: WR/TE
+      placeholder: "1"
+    validations: { required: false }
+   - type: input
+    id: wr_rb_te_flex
+    attributes:
+      label: WR/RB/TE
+      placeholder: "1"
+    validations: { required: false }
+  - type: input
+    id: qb_wr_rb_teflex
+    attributes:
+      label: QB/WR/RB/TE
       placeholder: "1"
     validations: { required: false }
   - type: input
@@ -124,12 +133,3 @@ body:
       label: Receptions (PPR)
       placeholder: "1"
     validations: { required: true }
-
-  - type: textarea
-    id: additional_rules
-    attributes:
-      label: Additional Rules/Notes
-      description: Any special rules, bonuses, or settings not covered above?
-      placeholder: "E.g., Bonus for 100+ yard games, negative points for missed field goals, etc."
-    validations:
-      required: false
