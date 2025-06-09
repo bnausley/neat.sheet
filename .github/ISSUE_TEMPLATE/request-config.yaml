@@ -1,8 +1,5 @@
 name: League & Scoring Settings Request
 description: Submit your league and scoring settings to generate a custom configuration.
-title: "[Config Request]: "
-labels: ["config-request"]
-assignees: []
 body:
   - type: input
     id: league_name
