@@ -1,11 +1,14 @@
 name: League & Scoring Settings Request
 description: Submit your league and scoring settings to generate a custom configuration.
+title: "[Config Request]: "
+labels: ["config-request"]
+assignees: []
 body:
   - type: markdown
     attributes:
-    value: |
-      ### Roster Settings (number per team)
-        
+      value: |
+        ### League Info
+
   - type: input
     id: number_of_teams
     attributes:
@@ -19,122 +22,160 @@ body:
     attributes:
       value: |
         ### Roster Settings (number per team)
+
   - type: input
     id: qb
     attributes:
       label: QB
       placeholder: "1"
-    validations: { required: true }
+    validations:
+      required: true
+
   - type: input
     id: rb
     attributes:
       label: RB
       placeholder: "2"
-    validations: { required: true }
+    validations:
+      required: true
+
   - type: input
     id: wr
     attributes:
       label: WR
       placeholder: "2"
-    validations: { required: true }
+    validations:
+      required: true
+
   - type: input
     id: te
     attributes:
       label: TE
       placeholder: "1"
-    validations: { required: true }
+    validations:
+      required: true
+
   - type: input
     id: wr_rb_flex
     attributes:
       label: WR/RB
       placeholder: "1"
-    validations: { required: false }
+    validations:
+      required: false
+
   - type: input
     id: wr_te_flex
     attributes:
       label: WR/TE
       placeholder: "1"
-    validations: { required: false }
+    validations:
+      required: false
+
   - type: input
     id: wr_rb_te_flex
     attributes:
       label: WR/RB/TE
       placeholder: "1"
-    validations: { required: false }
+    validations:
+      required: false
+
   - type: input
     id: qb_wr_rb_teflex
     attributes:
       label: QB/WR/RB/TE
       placeholder: "1"
-    validations: { required: false }
+    validations:
+      required: false
+
   - type: input
     id: k
     attributes:
       label: K
       placeholder: "1"
-    validations: { required: false }
+    validations:
+      required: false
+
   - type: input
     id: def
     attributes:
       label: DEF
       placeholder: "1"
-    validations: { required: false }
+    validations:
+      required: false
+
   - type: input
     id: bench
     attributes:
       label: BN (Bench)
       placeholder: "6"
-    validations: { required: true }
+    validations:
+      required: true
 
   - type: markdown
     attributes:
       value: |
         ### Scoring Settings (enter numbers only)
+
   - type: input
     id: pass_yds
     attributes:
       label: Pass Yards (per yard)
       placeholder: "0.04"
-    validations: { required: true }
+    validations:
+      required: true
+
   - type: input
     id: pass_td
     attributes:
       label: Pass TD
       placeholder: "4"
-    validations: { required: true }
+    validations:
+      required: true
+
   - type: input
     id: int
     attributes:
       label: INT (Interception)
       placeholder: "-2"
-    validations: { required: true }
+    validations:
+      required: true
+
   - type: input
     id: rush_yds
     attributes:
       label: Rush Yards (per yard)
       placeholder: "0.1"
-    validations: { required: true }
+    validations:
+      required: true
+
   - type: input
     id: rush_td
     attributes:
       label: Rush TD
       placeholder: "6"
-    validations: { required: true }
+    validations:
+      required: true
+
   - type: input
     id: rec_yds
     attributes:
       label: Rec Yards (per yard)
       placeholder: "0.1"
-    validations: { required: true }
+    validations:
+      required: true
+
   - type: input
     id: rec_td
     attributes:
       label: Rec TD
       placeholder: "6"
-    validations: { required: true }
+    validations:
+      required: true
+
   - type: input
     id: rec
     attributes:
       label: Receptions (PPR)
       placeholder: "1"
-    validations: { required: true }
+    validations:
+      required: true
