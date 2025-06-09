@@ -31,7 +31,7 @@ Don't see your league format? Want a custom scoring setup? You can request a cus
 - Roster composition (e.g., 1QB/2RB/3WR/1TE/1FLEX/1K/1DST, etc.)
 - Any other custom settings
 
-- ## Contributing
+## Contributing
 
 We welcome:
 - **Config requests** for new league types
