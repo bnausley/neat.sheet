@@ -1,7 +1,7 @@
 name: League & Scoring Settings Request
 description: Submit your league and scoring settings to generate a custom configuration.
 body:
-  - type: markdownAdd commentMore actions
+  - type: markdown
     attributes:
     value: |
       ### Roster Settings (number per team)
@@ -55,7 +55,7 @@ body:
       label: WR/TE
       placeholder: "1"
     validations: { required: false }
-   - type: input
+  - type: input
     id: wr_rb_te_flex
     attributes:
       label: WR/RB/TE
