@@ -1,0 +1,69 @@
+name: League & Scoring Settings Request
+description: Submit your league and scoring settings to generate a custom configuration.
+title: "[Config Request]: "
+labels: ["config-request"]
+assignees: []
+body:
+  - type: input
+    id: league_name
+    attributes:
+      label: League Name
+      description: What is the name of your fantasy league?
+      placeholder: "My Fantasy League"
+    validations:
+      required: true
+
+  - type: input
+    id: number_of_teams
+    attributes:
+      label: Number of Teams
+      description: How many teams are in your league?
+      placeholder: "12"
+    validations:
+      required: true
+
+  - type: input
+    id: roster_settings
+    attributes:
+      label: Roster Settings
+      description: Enter roster spots (e.g., QB:1, RB:2, WR:2, TE:1, FLEX:1, K:1, DEF:1, BN:6)
+      placeholder: "QB:1, RB:2, WR:2, TE:1, FLEX:1, K:1, DEF:1, BN:6"
+    validations:
+      required: true
+
+  - type: textarea
+    id: scoring_settings
+    attributes:
+      label: Scoring Settings
+      description: |
+        Provide your scoring rules. Example:
+        ```
+        Pass Yards: 0.04 per yard
+        Pass TD: 4
+        INT: -2
+        Rush Yards: 0.1 per yard
+        Rush TD: 6
+        Rec Yards: 0.1 per yard
+        Rec TD: 6
+        Receptions: 1
+        ```
+      placeholder: |
+        Pass Yards: 0.04 per yard
+        Pass TD: 4
+        INT: -2
+        Rush Yards: 0.1 per yard
+        Rush TD: 6
+        Rec Yards: 0.1 per yard
+        Rec TD: 6
+        Receptions: 1
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_rules
+    attributes:
+      label: Additional Rules or Notes
+      description: Any special rules, bonuses, or settings not covered above?
+      placeholder: "E.g., Bonus for 100+ yard games, negative points for missed field goals, etc."
+    validations:
+      required: false
