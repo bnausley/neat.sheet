@@ -19,142 +19,116 @@ body:
     validations:
       required: true
 
-  # Roster Settings
+  - type: markdown
+    attributes:
+      value: |
+        ### Roster Settings (number per team)
   - type: input
     id: qb
     attributes:
-      label: Quarterbacks (QB)
-      description: How many QB spots per team?
+      label: QB
       placeholder: "1"
-    validations:
-      required: true
+    validations: { required: true }
   - type: input
     id: rb
     attributes:
-      label: Running Backs (RB)
-      description: How many RB spots per team?
+      label: RB
       placeholder: "2"
-    validations:
-      required: true
+    validations: { required: true }
   - type: input
     id: wr
     attributes:
-      label: Wide Receivers (WR)
-      description: How many WR spots per team?
+      label: WR
       placeholder: "2"
-    validations:
-      required: true
+    validations: { required: true }
   - type: input
     id: te
     attributes:
-      label: Tight Ends (TE)
-      description: How many TE spots per team?
+      label: TE
       placeholder: "1"
-    validations:
-      required: true
+    validations: { required: true }
   - type: input
     id: flex
     attributes:
       label: FLEX
-      description: How many FLEX spots per team?
       placeholder: "1"
-    validations:
-      required: false
+    validations: { required: false }
   - type: input
     id: k
     attributes:
-      label: Kickers (K)
-      description: How many Kicker spots per team?
+      label: K
       placeholder: "1"
-    validations:
-      required: false
+    validations: { required: false }
   - type: input
     id: def
     attributes:
-      label: Defense/Special Teams (DEF)
-      description: How many DEF spots per team?
+      label: DEF
       placeholder: "1"
-    validations:
-      required: false
+    validations: { required: false }
   - type: input
     id: bench
     attributes:
-      label: Bench (BN)
-      description: How many bench spots per team?
+      label: BN (Bench)
       placeholder: "6"
-    validations:
-      required: true
+    validations: { required: true }
 
-  # Scoring Settings
+  - type: markdown
+    attributes:
+      value: |
+        ### Scoring Settings (enter numbers only)
   - type: input
     id: pass_yds
     attributes:
-      label: Passing Yards (per yard)
-      description: Points per passing yard (e.g., 0.04)
+      label: Pass Yards (per yard)
       placeholder: "0.04"
-    validations:
-      required: true
+    validations: { required: true }
   - type: input
     id: pass_td
     attributes:
-      label: Passing Touchdowns (TD)
-      description: Points per passing TD
+      label: Pass TD
       placeholder: "4"
-    validations:
-      required: true
+    validations: { required: true }
   - type: input
     id: int
     attributes:
-      label: Interceptions (INT)
-      description: Points per interception (negative value)
+      label: INT (Interception)
       placeholder: "-2"
-    validations:
-      required: true
+    validations: { required: true }
   - type: input
     id: rush_yds
     attributes:
-      label: Rushing Yards (per yard)
-      description: Points per rushing yard (e.g., 0.1)
+      label: Rush Yards (per yard)
       placeholder: "0.1"
-    validations:
-      required: true
+    validations: { required: true }
   - type: input
     id: rush_td
     attributes:
-      label: Rushing Touchdowns (TD)
-      description: Points per rushing TD
+      label: Rush TD
       placeholder: "6"
-    validations:
-      required: true
+    validations: { required: true }
   - type: input
     id: rec_yds
     attributes:
-      label: Receiving Yards (per yard)
-      description: Points per receiving yard (e.g., 0.1)
+      label: Rec Yards (per yard)
       placeholder: "0.1"
-    validations:
-      required: true
+    validations: { required: true }
   - type: input
     id: rec_td
     attributes:
-      label: Receiving Touchdowns (TD)
-      description: Points per receiving TD
+      label: Rec TD
       placeholder: "6"
-    validations:
-      required: true
+    validations: { required: true }
   - type: input
     id: rec
     attributes:
-      label: Receptions
-      description: Points per reception (PPR, e.g., 1)
+      label: Receptions (PPR)
       placeholder: "1"
-    validations:
-      required: true
+    validations: { required: true }
 
   - type: textarea
     id: additional_rules
     attributes:
-      label: Additional Rules or Notes
+      label: Additional Rules/Notes
       description: Any special rules, bonuses, or settings not covered above?
       placeholder: "E.g., Bonus for 100+ yard games, negative points for missed field goals, etc."
     validations:
