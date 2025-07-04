@@ -1,55 +1,55 @@
 # neat.sheet
 
-Welcome to the neat.sheet public fantasy football redraft sheet generator!
-This has been a project dedicated to developing an alternative to the data heavy sheets that are out there.
-
-## What is this?
-
-This repository contains:
-- **Printable PDF draft sheets** for a multitude of league setups (roster compositions + scoring settings, etc.)
-- A **community-driven configuration file** (`league_configs.json`) describing each available draft sheet
-- A simple process for **requesting new league configurations**—if you don’t see your league here, request it and we’ll generate it!
-
-Sheets are updated daily for the latest player projections and rankings
-
-## How to Find Your Draft Sheet
-
-1. Browse the [`/generated`](./generated) folder for the latest date.
-2. Each subfolder is named for a league configuration (e.g., `ppr`, `superflex_halfppr`, etc.).
-3. Download the draft sheet PDF that matches your league.
-4. See [`index.json`](./index.json) or [`league_configs.yaml`](./league_configs.yaml) for details on each configuration.
-
-## Requesting a New League Configuration
-
-Don't see your league format? Want a custom scoring setup? You can request a custom draft sheet!
-
-**How to request:**
-- [Open an Issue](../../issues/new?template=request-config.yaml) using our "Draft Sheet Config Request" template.
-
-**Config fields to specify:**
-- Scoring system (PPR, half-PPR, standard, custom values)
-- Roster composition (e.g., 1QB/2RB/3WR/1TE/1FLEX/1K/1DST, etc.)
-- Any other custom settings
-
-## Contributing
-
-We welcome:
-- **Config requests** for new league types
-- **Feedback** on existing sheets
+neat.sheet is a simple web tool for generating custom fantasy football draft sheets as downloadable PDFs.
 
 ---
 
-## License & Data Sources
+## What neat.sheet Does
 
-- Generated draft sheets are provided for personal, league, and non-commercial use.
-- Please see [`DATA_SOURCES.md`](./DATA_SOURCES.md) for information on where rankings and projections come from.
-- All config and metadata files are open for contributions.
+neat.sheet lets you create a draft sheet tailored to your fantasy football league’s unique settings. You input your league size, roster positions, and scoring rules, and the site checks if a draft sheet matching your setup already exists. If it does, you can download it instantly. If not, you can submit your configuration and a new draft sheet will be generated for you.
 
 ---
 
-## Questions & Support
+## How to Use neat.sheet
 
-Open an [issue](../../issues) or start a [discussion](../../discussions) if you have questions or suggestions!
+1. **Set Up Your League**
+   - Use the League panel to select the number of teams, weeks, and roster positions (QB, RB, WR, TE, etc.).
+   - Adjust each value using the +/– buttons or by typing directly into the field.
+
+2. **Customize Scoring**
+   - In the Scoring panel, set how many points are awarded for each stat (receptions, yards, touchdowns, etc.).
+
+3. **Check for Your Draft Sheet**
+   - As you change settings, the Status area above the form will automatically check if a draft sheet PDF already exists for your configuration.
+   - If a match is found, a download link will appear.
+
+4. **Submit for a New Sheet (if needed)**
+   - If no sheet exists for your setup, you’ll see a prompt to submit your configuration.
+   - Click the submit button. Your settings will be sent for processing.
+   - After a few minutes, refresh the page or re-enter your settings to check if your PDF is ready.
 
 ---
 
+## What Happens Behind the Scenes
+- When you submit your configuration, it’s saved and queued for PDF generation.
+- Once generated, your draft sheet is stored and will be instantly available for anyone with the same settings in the future.
+- Submitted configurations will continue to be regenerated daily with updated projections and injury statuses.
+- All sheets are organized by a unique ID based on your league and scoring settings.
+
+---
+
+## FAQ
+
+**Q: Is my data saved or shared?**  
+A: Only your league settings and scoring rules are saved, for the purpose of generating and storing the draft sheet. No personal or identifying information is collected.
+
+**Q: How long does it take to get a new sheet?**  
+A: Usually just a few minutes. If it takes longer, try refreshing the page after a short wait.
+
+**Q: Can I use this for any league?**  
+A: Yes! As long as your league’s settings fit the available options, you can generate a sheet for it.
+
+---
+
+## License
+See `LICENSE` for details.
